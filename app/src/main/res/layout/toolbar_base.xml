@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:id="@+id/toolbar"
+                                   style="@style/toolbar_base"
+                                   app:contentInsetEnd="0dp"
+                                   app:contentInsetLeft="0dp"
+                                   app:contentInsetRight="0dp"
+                                   app:contentInsetStart="0dp"
+                                   app:contentInsetStartWithNavigation="0dp">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5">
+
+        <LinearLayout
+                android:id="@+id/ll_left_menu"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center">
+
+            <ImageView
+                    android:id="@+id/left_menu"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:background="@drawable/arrow_left"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_screen_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/ll_right_menu"
+                android:layout_toRightOf="@+id/ll_left_menu"
+                android:gravity="center">
+
+            <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_18"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_right_menu"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center">
+
+            <ImageView
+                    android:id="@+id/right_menu"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:visibility="invisible"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

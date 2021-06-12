@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_base"/>
+
+    <com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout
+            android:id="@+id/fabtoolbar"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:containerId="@+id/fabtoolbar_container"
+            app:fabId="@+id/fabtoolbar_fab"
+            app:fabToolbarId="@+id/fabtoolbar_toolbar"
+            app:fadeInFraction="0.2"
+            app:hideDuration="200"
+            app:horizontalMargin="10dp"
+            app:showDuration="600"
+            app:verticalMargin="10dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="@dimen/dp_60">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="vertical">
+
+        <include
+            layout="@layout/row_contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10" />
+            <include
+                layout="@layout/row_contact_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/dp_10" />
+            <include
+                layout="@layout/row_contact_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10" />
+
+            <include
+                layout="@layout/row_contact_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10" />
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+                android:id="@+id/fabtoolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true">
+
+            <ImageView
+                    android:id="@+id/fabtoolbar_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_fab"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:id="@+id/fabtoolbar_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignStart="@+id/fabtoolbar_container"
+                android:layout_alignLeft="@+id/fabtoolbar_container"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:background="#A0B8ECB8"
+                android:layout_marginLeft="0dp"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight=".33"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+
+                <ImageView
+                        android:id="@+id/iv_camera"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_camera_32dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight=".33"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:id="@+id/iv_gallery"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_gallery"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight=".33"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_clear_32dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout>
+
+</RelativeLayout>
